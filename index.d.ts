@@ -1,0 +1,1 @@
+export const SqliteStore: typeof import("./src/SqliteStore");
