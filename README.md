@@ -4,9 +4,11 @@ A SQLite plugin for whatsapp-web.js!
 
 Use SqliteStore to save your WhatsApp MultiDevice session on a SQLite Database.
 
+>Note: This is a port of [wwebjs-mysql](https://github.com/paulvl/wwebjs-mysql) to SQLite.
+
 ## Quick Links
 
-- [Guide / Getting Started](https://wwebjs.dev/guide/authentication.html)
+- [Guide / Getting Started](https://wwebjs.dev/guide/creating-your-bot/authentication.html#remoteauth-strategy)
 - [GitHub](https://github.com/eugabrielsilva/wwebjs-sqlite)
 - [npm](https://www.npmjs.com/package/wwebjs-sqlite)
 
@@ -20,7 +22,7 @@ The module is now available on npm! `npm i wwebjs-sqlite`
 const { Client, RemoteAuth } = require("whatsapp-web.js");
 const { SqliteStore } = require("wwebjs-sqlite");
 
-const store = new SqliteStore({ filename: "my-database.sqlite" });
+const store = new SqliteStore({ filename: "./my-database.sqlite" });
 
 const client = new Client({
   authStrategy: new RemoteAuth({
